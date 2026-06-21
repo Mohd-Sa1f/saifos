@@ -1,25 +1,47 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>SaifOS</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SaifOS</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+<div id="desktop">
 
-<div class="window" id="about">
-    <div class="title">About</div>
-    <div class="content">My first application.</div>
-</div>
+        <div class="window" id="about">
+            <div class="title-bar">About SaifOS</div>
+            <div class="content">
+                <h3>Welcome!</h3>
+                <p>SaifOS is a custom web operating system created by Mohammed Saif.</p>
+            </div>
+        </div>
 
-<div class="window" id="notes">
-    <div class="title">Notes</div>
-    <div class="content">
-        <textarea rows="6" cols="30"></textarea>
+        <div class="window" id="notes">
+            <div class="title-bar">Notes</div>
+            <div class="content">
+                <textarea placeholder="Write your notes here..."></textarea>
+            </div>
+        </div>
+
+        <div class="window" id="clock-window">
+            <div class="title-bar">Clock</div>
+            <div class="content">
+                <h2 id="clock"></h2>
+            </div>
+        </div>
+
     </div>
-</div>
 
-<script src="script.js"></script>
+    <div id="taskbar">
+        <button onclick="toggleWindow('about')">About</button>
+        <button onclick="toggleWindow('notes')">Notes</button>
+        <button onclick="toggleWindow('clock-window')">Clock</button>
+        <button onclick="changeWallpaper()">Wallpaper</button>
+        <button onclick="toggleDarkMode()">Dark Mode</button>
+    </div>
 
+    <script src="script.js"></script>
 </body>
 </html>
